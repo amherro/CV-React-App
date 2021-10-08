@@ -5,15 +5,26 @@ import Address from './Address'
 import Phone from './Phone'
 
 export default class Demographics extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            email: '',
+            address: '',
+            phone: '',
+        }
+    }
     render() {
+        const { name, email, address, phone } = this.state;
         return (
             <div>
                 <h2>Demographics</h2>
                 <form>
-                    <Name />
-                    <Email />
-                    <Address />
-                    <Phone />
+                    <Name name={name}/>
+                    <Email email={email}/>
+                    <Address address={address}/>
+                    <Phone phone={phone}/>
                     <button type='submit'>Save</button>
                 </form>
             </div>

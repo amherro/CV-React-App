@@ -7,8 +7,8 @@ export default class Education extends Component {
             <div>
                 <h2>Education</h2>
                 <Degree />
-                <button>Add Another School</button>
             </div>
         )
     }
 }
+
