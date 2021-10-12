@@ -1,0 +1,12 @@
+.graduate-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.graduate-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.graduate-input {
+    width: 350px;
+}

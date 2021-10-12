@@ -1,0 +1,12 @@
+.company-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.company-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.company-input {
+    width: 350px;
+}

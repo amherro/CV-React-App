@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+}
+.main-display {
+    display: flex;
+}
+.form-style {
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px 30px;
+}
+.demo-style {
+    margin-top: 20px;
+    margin-right: 75px;
+    padding-left: 20px;
+    height: 1000px;
+    min-width: 550px;
+    border: 2px solid rgb(0, 0, 0);
+}
+

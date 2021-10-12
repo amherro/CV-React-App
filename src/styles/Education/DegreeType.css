@@ -1,0 +1,12 @@
+.degree-type-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.degree-type-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.degree-type-input {
+    width: 350px;
+}

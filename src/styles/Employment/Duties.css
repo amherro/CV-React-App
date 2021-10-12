@@ -1,0 +1,12 @@
+.duties-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.duties-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.duties-input {
+    width: 500px;
+}

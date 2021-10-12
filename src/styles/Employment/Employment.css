@@ -1,0 +1,15 @@
+.heading {
+    margin: 30px 70px;
+}
+.employment-style {
+    margin: 20px 50px 50px 50px;
+}
+.employment-btns {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+}

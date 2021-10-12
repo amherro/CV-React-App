@@ -1,0 +1,12 @@
+.address-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.address-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.address-input {
+    width: 350px;
+}

@@ -3,6 +3,7 @@ import Name from './Name'
 import Email from './Email'
 import Address from './Address'
 import Phone from './Phone'
+import '../../styles/Demographics/Demographics.css'
 
 export default class Demographics extends Component {
     constructor(props) {
@@ -75,14 +76,26 @@ export default class Demographics extends Component {
         const { people } = this.state;
         const { name, email, address, phone } = this.state.info;
         return (
-            <div style={demographicsStyle}>
-                <h2>Demographics</h2>
-                <form people={people} onSubmit={this.addDemographics} >
-                    <Name name={name} addName={this.addName}/>
-                    <Email email={email} addEmail={this.addEmail}/>
-                    <Address address={address} addAddress={this.addAddress}/>
-                    <Phone phone={phone} addPhone={this.addPhone}/>
-                    <button type='submit'>Save</button>
+            <div>
+                <h2 className='heading'>Demographics</h2>
+                <form people={people} onSubmit={this.addDemographics} className='demographics-style'>
+                    <Name
+                        name={name} 
+                        addName={this.addName}
+                    />
+                    <Email 
+                        email={email} 
+                        addEmail={this.addEmail}
+                    />
+                    <Address 
+                        address={address} 
+                        addAddress={this.addAddress}
+                    />
+                    <Phone 
+                        phone={phone} 
+                        addPhone={this.addPhone}
+                    />
+                    <button className='demographics-btn' type='submit'>Save</button>
                 </form>
             </div>
             
@@ -90,6 +103,4 @@ export default class Demographics extends Component {
         )
     }
 }
-const demographicsStyle = {
-    marginLeft: '75px',
-}
+

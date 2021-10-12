@@ -1,0 +1,74 @@
+.preview-section {
+    margin-right: 10px;
+}
+
+.demographics-preview {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    margin-right: 20px;
+    margin-top: 40px;
+}
+.name-preview {
+    margin: 10px 10px 10px 0px;
+}
+.education-preview-title {
+    margin: 50px 408px 20px 20px;
+    font-size: 25px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.education-preview-info {
+    margin-left: 20px; 
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.attended-preview {
+    grid-column: 2;
+    font-size: 15px;
+}
+.school-preview {
+    font-size: 22px;
+    grid-row: 1;
+}
+.degree-preview {
+    font-size: 18px;
+}
+.gpa-preview, .graduate-preview {
+    font-size: 15px;
+    grid-column: 1;
+}
+.employment-preview-title {
+    margin: 50px 408px 20px 20px;
+    font-size: 25px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.employment-preview-info {
+    margin-left: 20px; 
+    line-height: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.employment-length-preview {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 15px;
+}
+.company-preview {
+    font-size: 20px;
+    grid-row: 1;
+    margin-right: 20px;
+}
+.position-preview {
+    font-size: 16px;
+    grid-column: 1;
+}
+.duties-preview {
+    font-size: 14px;
+    grid-column: 1;
+    line-height: 20px;
+}
+.duties-preview {
+    margin: 5px 0px;
+    grid-column: 1;
+}

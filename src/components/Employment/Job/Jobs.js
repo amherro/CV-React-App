@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../../styles/Employment/Employment.css'
 import Company from './Company'
 import Duties from './Duties'
 import EmploymentLength from './EmploymentLength'
@@ -105,12 +106,26 @@ export default class Jobs extends Component {
         const { jobs, company, position, duties, length } = this.state.job;
         return (
             <div>
-                <form jobs={jobs} onSubmit={this.addEmployment}>
-                    <Company company={company} addCompanyName={this.addCompanyName}/>
-                    <Position position={position} addTitle={this.addTitle}/>
-                    <Duties duties={duties} addJobDuties={this.addJobDuties}/>
-                    <EmploymentLength length={length} startJobDate={this.startJobDate} endJobDate={this.endJobDate}/>
-                    <button type='submit'>Add</button>
+                <form className='employment-style' jobs={jobs} onSubmit={this.addEmployment}>
+                    <Company 
+                        company={company} 
+                        addCompanyName={this.addCompanyName}
+                    />
+                    <Position 
+                        position={position} 
+                        addTitle={this.addTitle}
+                    />
+                    <Duties 
+                        duties={duties} 
+                        addJobDuties={this.addJobDuties}
+                    />
+                    <EmploymentLength 
+                        length={length} 
+                        startJobDate={this.startJobDate} 
+                        endJobDate={this.endJobDate}
+                    />
+                    <button className='employment-btns' type='submit'>Add</button>
+                    <button className='employment-btns'>Add Another Job</button>
                 </form>
             </div>
         )

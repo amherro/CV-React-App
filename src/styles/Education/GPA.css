@@ -1,0 +1,12 @@
+.gpa-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.gpa-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.gpa-input {
+    width: 350px;
+}

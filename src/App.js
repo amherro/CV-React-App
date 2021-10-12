@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './styles/App.css'
 import Header from './components/Header'
 import Demographics from './components/Demographics/Demographics'
 import Education from './components/Education/Education'
@@ -40,9 +41,10 @@ export default class App extends Component {
         <header>
           <Header />
         </header>
-        <main style={mainDisplay}>
-          <div style={formStyle}>
+        <main className='main-display'>
+          <div className='form-style'>
             <Demographics 
+              className='demographics-style'
               demographics={demographics} 
               addPersonalInfo={this.addPersonalInfo}
             />
@@ -55,7 +57,7 @@ export default class App extends Component {
               addNewEmployer={this.addNewEmployer}
             />
           </div>
-          <div>
+          <div className='demo-style'>
             <Demo 
               demographics={demographics} 
               schools={schools} 
@@ -66,12 +68,4 @@ export default class App extends Component {
       </div>
     )
   }
-}
-
-const mainDisplay = {
-  display: 'flex',
-}
-
-const formStyle = {
-  border: '2px solid black' 
 }

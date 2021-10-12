@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../../styles/Education/Degree.css'
 import AreaOfStudy from './AreaOfStudy'
 import DatesAttended from './DatesAttended'
 import DegreeType from './DegreeType'
@@ -149,7 +150,7 @@ export default class Degree extends Component {
         const { degrees } = this.state
         return (
             <div>
-                <form degrees={degrees} onSubmit={this.addDegree}>
+                <form className='education-style' degrees={degrees} onSubmit={this.addDegree}>
                     <School 
                         school={school} 
                         addSchool={this.addSchool}
@@ -177,9 +178,9 @@ export default class Degree extends Component {
                         addStartDate={this.addStartDate} 
                         addGradDate={this.addGradDate}
                     />
-                    <button type='submit'>Add</button>
-                    <button>Edit School</button>
-                    <button>Delete School</button>
+                    <button className='education-btns' type='submit'>Add</button>
+                    <button className='education-btns'>Edit School</button>
+                    <button className='education-btns'>Delete School</button>
                 </form>
             </div>
         )

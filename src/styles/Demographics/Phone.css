@@ -1,0 +1,12 @@
+.phone-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.phone-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.phone-input {
+    width: 350px;
+}

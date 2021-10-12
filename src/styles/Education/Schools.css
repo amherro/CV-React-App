@@ -1,0 +1,12 @@
+.school-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.school-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.school-input {
+    width: 350px;
+}
