@@ -28,6 +28,7 @@ export default class Degree extends Component {
     }
     addDegree = (e) => {
         e.preventDefault();
+        this.props.addNewEducation([this.state.education.school, this.state.education.areaOfStudy, this.state.education.degreeType, this.state.education.gpa, this.state.education.graduate, this.state.education.datesAttended.start, this.state.education.datesAttended.end]);
         this.setState({
             degrees: this.state.degrees.concat(this.state.education),
             education: {
@@ -116,6 +117,7 @@ export default class Degree extends Component {
     addStartDate = (e) => {
         this.setState({
             education: {
+                school: this.state.education.school,
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
@@ -130,6 +132,7 @@ export default class Degree extends Component {
     addGradDate = (e) => {
         this.setState({
             education: {
+                school: this.state.education.school,
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
@@ -147,13 +150,33 @@ export default class Degree extends Component {
         return (
             <div>
                 <form degrees={degrees} onSubmit={this.addDegree}>
-                    <School school={school} addSchool={this.addSchool}/>
-                    <AreaOfStudy areaOfStudy={areaOfStudy} addMajor={this.addMajor}/>
-                    <DegreeType degree={degree} degreeType={degreeType} chooseDegree={this.chooseDegree}/>
-                    <GPA gpa={gpa} addGPA={this.addGPA}/>
+                    <School 
+                        school={school} 
+                        addSchool={this.addSchool}
+                    />
+                    <AreaOfStudy 
+                        areaOfStudy={areaOfStudy} 
+                        addMajor={this.addMajor}
+                    />
+                    <DegreeType 
+                        degree={degree} 
+                        degreeType={degreeType} 
+                        chooseDegree={this.chooseDegree}
+                    />
+                    <GPA 
+                        gpa={gpa} 
+                        addGPA={this.addGPA}
+                    />
                     {/* Fix graduation checkbox so it changes when you click before submitting the form. Also add styling */}
-                    <Graduate graduate={graduate} toggleGraduation={this.toggleGraduation}/>
-                    <DatesAttended datesAttended={datesAttended} addStartDate={this.addStartDate} addGradDate={this.addGradDate}/>
+                    <Graduate 
+                        graduate={graduate} 
+                        toggleGraduation={this.toggleGraduation}
+                    />
+                    <DatesAttended 
+                        datesAttended={datesAttended} 
+                        addStartDate={this.addStartDate} 
+                        addGradDate={this.addGradDate}
+                    />
                     <button type='submit'>Add</button>
                     <button>Edit School</button>
                     <button>Delete School</button>

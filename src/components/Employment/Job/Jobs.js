@@ -20,6 +20,22 @@ export default class Jobs extends Component {
             jobs: [],
         }
     }
+    addEmployment = (e) => {
+        e.preventDefault();
+        this.props.addNewEmployer([this.state.job.company, this.state.job.position, this.state.job.duties, this.state.job.length.started, this.state.job.length.ended])
+        this.setState({
+           jobs: this.state.jobs.concat(this.state.job),
+           job: {
+               company: '',
+               position: '',
+               duties: '',
+               length: {
+                   started: '', 
+                   ended: '',
+               }
+           }
+        })
+    }
     addCompanyName = (e) => {
         this.setState({
             job: {
@@ -86,10 +102,10 @@ export default class Jobs extends Component {
         })
     }
     render() {
-        const { company, position, duties, length } = this.state.job;
+        const { jobs, company, position, duties, length } = this.state.job;
         return (
             <div>
-                <form>
+                <form jobs={jobs} onSubmit={this.addEmployment}>
                     <Company company={company} addCompanyName={this.addCompanyName}/>
                     <Position position={position} addTitle={this.addTitle}/>
                     <Duties duties={duties} addJobDuties={this.addJobDuties}/>

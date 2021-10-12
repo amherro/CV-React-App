@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 export default class Address extends Component {
     render() {
-        const { address } = this.props
+        const { address, addAddress } = this.props
         return (
             <div>
                 <label>Address</label>
-                <input type='text' placeholder='Enter your current address...' value={address}></input>
+                <input type='text' name='address' placeholder='Enter your current address...' value={address} onChange={addAddress}></input>
             </div>
         )
     }

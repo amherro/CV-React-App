@@ -1,30 +1,42 @@
 import React, { Component } from 'react'
 
+
+
 export default class Demo extends Component {
     render() {
+        const { demographics, schools, employers } = this.props;
         return (
-            <div>
-                <div className='demographics'>
-                    <h3>Name</h3>
-                    <h3>Email</h3>
-                    <h3>Address</h3>
-                    <h3>Phone</h3>
+            <div style={demoStyle}>
+                <h2>Preview</h2>
+                <div className='demographics' style={{border: '2px black solid', marginRight: '200px'}} >
+                    <h1>{demographics[0]}</h1>
+                    <h1>{demographics[1]}</h1>
+                    <h1>{demographics[2]}</h1>
+                    <h1>{demographics[3]}</h1>
                 </div>
-                <div className='education'>
-                    <h3>School</h3>
-                    <h3>Area of Study</h3>
-                    <h3>Degree</h3>
-                    <h3>GPA</h3>
-                    <h3>Graduate</h3>
-                    <h3>Dates Attended</h3>
+                <div className='education' style={{border: '2px red solid', marginRight: '200px'}} >
+                    <h1>{schools[0]}</h1>
+                    <h1>{schools[1]}</h1>
+                    <h1>{schools[2]}</h1>
+                    <h1>{schools[3]}</h1>
+                    <h1>{schools[4]}</h1>
+                    <h1>{schools[5]}</h1>
+                    <h1>{schools[6]}</h1>
                 </div>
-                <div className='work_history'>
-                    <h3>Company</h3>
-                    <h3>Positon</h3>
-                    <h3>Duties</h3>
-                    <h3>Employment Length</h3>
+                <div className='work_history' style={{border: '2px blue solid', marginRight: '200px'}}>
+                    <h1>{employers[0]}</h1>
+                    <h1>{employers[1]}</h1>
+                    <h1>{employers[2]}</h1>
+                    <h1>{employers[3]}</h1>
+                    <h1>{employers[4]}</h1>
                 </div>
             </div>
         )
     }
+}
+const demoStyle = {
+    marginRight: '75px',
+    paddingLeft: '20px',
+    border: '2px solid #000',
+    minHeight: '500px',
 }

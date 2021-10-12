@@ -7,24 +7,81 @@ import Phone from './Phone'
 export default class Demographics extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
-            name: '',
-            email: '',
-            address: '',
-            phone: '',
+            info: {
+                name: '',
+                email: '',
+                address: '',
+                phone: '',
+            },
+            people: [],
         }
     }
+    addDemographics = (e) => {
+        e.preventDefault();
+        this.props.addPersonalInfo([this.state.info.name, this.state.info.email, this.state.info.address, this.state.info.phone])
+        this.setState({
+            people: this.state.people.concat(this.state.info),
+            info: {
+                name: '',
+                email: '',
+                address: '',
+                phone: '',
+            }
+        })
+        this.props.demographics.concat(this.state.people)
+    }
+    addName = (e) => {
+        this.setState({
+            info: {
+                name: e.target.value,
+                email: this.state.info.email,
+                address: this.state.info.address,
+                phone: this.state.info.phone,
+            }
+        })
+    }
+    addEmail = (e) => {
+        this.setState({
+            info: {
+                name: this.state.info.name,
+                email: e.target.value,
+                address: this.state.info.address,
+                phone: this.state.info.phone,
+            }
+        })
+    }
+    addAddress = (e) => {
+        this.setState({
+            info: {
+                name: this.state.info.name,
+                email: this.state.info.email,
+                address: e.target.value,
+                phone: this.state.info.phone,
+            }
+        })
+    }
+    addPhone = (e) => {
+        this.setState({
+            info: {
+                name: this.state.info.name,
+                email: this.state.info.email,
+                address: this.state.info.address,
+                phone: e.target.value,
+            }
+        })
+    }
     render() {
-        const { name, email, address, phone } = this.state;
+        const { people } = this.state;
+        const { name, email, address, phone } = this.state.info;
         return (
-            <div>
+            <div style={demographicsStyle}>
                 <h2>Demographics</h2>
-                <form>
-                    <Name name={name}/>
-                    <Email email={email}/>
-                    <Address address={address}/>
-                    <Phone phone={phone}/>
+                <form people={people} onSubmit={this.addDemographics} >
+                    <Name name={name} addName={this.addName}/>
+                    <Email email={email} addEmail={this.addEmail}/>
+                    <Address address={address} addAddress={this.addAddress}/>
+                    <Phone phone={phone} addPhone={this.addPhone}/>
                     <button type='submit'>Save</button>
                 </form>
             </div>
@@ -32,4 +89,7 @@ export default class Demographics extends Component {
             
         )
     }
+}
+const demographicsStyle = {
+    marginLeft: '75px',
 }

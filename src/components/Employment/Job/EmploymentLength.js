@@ -6,7 +6,7 @@ export default class EmploymentLength extends Component {
         const { length, startJobDate, endJobDate } = this.props
         return (
             <div>
-                <lable>Please specifiy the dates you worked for this company.</lable>
+                <label>Please specifiy the dates you worked for this company.</label>
                 <p>Began</p>
                 <input type='date' value={length.started} onChange={startJobDate}></input>
                 <p>Ended</p>
