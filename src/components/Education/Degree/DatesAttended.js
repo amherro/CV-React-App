@@ -10,11 +10,11 @@ export default class DatesAttended extends Component {
                 <div className='calendar-section'>
                     <div className='began-calendar'>
                         <p className='calendar-label'>Began</p>
-                        <input className='calendar' type='date' value={datesAttended} onChange={addStartDate}></input>
+                        <input className='calendar' type='date' value={datesAttended.start} onChange={addStartDate}></input>
                     </div>
                     <div className='ended-calendar'>
                         <p className='calendar-label'>Ended</p>
-                        <input className='calendar' type='date' value={datesAttended} onChange={addGradDate}></input> 
+                        <input className='calendar' type='date' value={datesAttended.end} onChange={addGradDate}></input> 
                     </div>
                 </div> 
             </div>

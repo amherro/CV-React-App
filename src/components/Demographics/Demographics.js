@@ -72,6 +72,17 @@ export default class Demographics extends Component {
             }
         })
     }
+    resetDemographicsField = (e) => {
+        e.preventDefault();
+        this.setState({
+            info: {
+                name: '',
+                email: '',
+                address: '',
+                phone: '',
+            },
+        })
+    }
     render() {
         const { people } = this.state;
         const { name, email, address, phone } = this.state.info;
@@ -96,6 +107,7 @@ export default class Demographics extends Component {
                         addPhone={this.addPhone}
                     />
                     <button className='demographics-btn' type='submit'>Save</button>
+                    <button className='demographics-btn' onClick={this.resetDemographicsField}>Reset</button>
                 </form>
             </div>
             

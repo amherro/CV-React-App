@@ -29,6 +29,7 @@ export default class App extends Component {
       schools: this.state.schools.concat(school)
     })
   }
+
   addNewEmployer = (employer) => {
     this.setState({
       employers: this.state.employers.concat(employer)

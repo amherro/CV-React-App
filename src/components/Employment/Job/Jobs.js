@@ -102,6 +102,20 @@ export default class Jobs extends Component {
             }
         })
     }
+    resetEmploymentField = (e) => {
+        e.preventDefault();
+        this.setState({
+            job: {
+                company: '',
+                position: '',
+                duties: '',
+                length: {
+                    started: '',
+                    ended: '',
+                },
+            },
+        })
+    }
     render() {
         const { jobs, company, position, duties, length } = this.state.job;
         return (
@@ -126,6 +140,7 @@ export default class Jobs extends Component {
                     />
                     <button className='employment-btns' type='submit'>Add</button>
                     <button className='employment-btns'>Add Another Job</button>
+                    <button className='employment-btns' onClick={this.resetEmploymentField}>Reset</button>
                 </form>
             </div>
         )

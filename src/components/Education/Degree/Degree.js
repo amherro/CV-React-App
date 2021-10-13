@@ -4,7 +4,6 @@ import AreaOfStudy from './AreaOfStudy'
 import DatesAttended from './DatesAttended'
 import DegreeType from './DegreeType'
 import GPA from './GPA'
-import Graduate from './Graduate'
 import School from './School'
 
 export default class Degree extends Component {
@@ -17,7 +16,6 @@ export default class Degree extends Component {
                 areaOfStudy: '',
                 degreeType: '',
                 gpa: '',
-                graduate: false,
                 datesAttended: {
                     start: '',
                     end: '',
@@ -31,7 +29,9 @@ export default class Degree extends Component {
         e.preventDefault();
         this.props.addNewEducation([this.state.education.school, this.state.education.areaOfStudy, this.state.education.degreeType, this.state.education.gpa, this.state.education.graduate, this.state.education.datesAttended.start, this.state.education.datesAttended.end]);
         this.setState({
-            degrees: this.state.degrees.concat(this.state.education),
+            degrees: this.state.degrees.concat(this.state.education).map((degree) => {
+                return degree
+            }),
             education: {
                 school: '',
                 areaOfStudy: '',
@@ -97,23 +97,12 @@ export default class Degree extends Component {
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: e.target.value,
-                graduate: this.state.education.graduate,
                 datesAttended: {
                     start: this.state.education.datesAttended.start,
                     end: this.state.education.datesAttended.end,
                 }
            }
        })
-    }
-    toggleGraduation = () => {
-        this.setState(this.state.degrees.map((item) => {
-            if (item.graduate === false) {
-                item.graduate = true
-            } else if (item.graduate === true) {
-                item.graduate = false
-            }
-            return item
-        }))
     }
     addStartDate = (e) => {
         this.setState({
@@ -145,8 +134,23 @@ export default class Degree extends Component {
             }
         })
     }
+    resetEducationField = (e) => {
+        e.preventDefault();
+        this.setState({
+            education: {
+                school: '',
+                areaOfStudy: '',
+                degreeType: '',
+                gpa: '',
+                datesAttended: {
+                    start: '',
+                    end: '',
+                }
+            },
+        })
+    }
     render() {
-        const { school, areaOfStudy, degree, degreeType, gpa, graduate, datesAttended } = this.state.education;
+        const { school, areaOfStudy, degree, degreeType, gpa, datesAttended } = this.state.education;
         const { degrees } = this.state
         return (
             <div>
@@ -167,12 +171,7 @@ export default class Degree extends Component {
                     <GPA 
                         gpa={gpa} 
                         addGPA={this.addGPA}
-                    />
-                    {/* Fix graduation checkbox so it changes when you click before submitting the form. Also add styling */}
-                    <Graduate 
-                        graduate={graduate} 
-                        toggleGraduation={this.toggleGraduation}
-                    />
+                    />        
                     <DatesAttended 
                         datesAttended={datesAttended} 
                         addStartDate={this.addStartDate} 
@@ -180,7 +179,7 @@ export default class Degree extends Component {
                     />
                     <button className='education-btns' type='submit'>Add</button>
                     <button className='education-btns'>Edit School</button>
-                    <button className='education-btns'>Delete School</button>
+                    <button className='education-btns' onClick={this.resetEducationField}>Reset</button>
                 </form>
             </div>
         )
