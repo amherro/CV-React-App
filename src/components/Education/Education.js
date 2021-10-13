@@ -6,8 +6,8 @@ export default class Education extends Component {
     render() {
         const { schools, addNewEducation } = this.props
         return (
-            <div>
-                <h2 className='heading'>Education</h2>
+            <div className='education-background-style'>
+                <h2 className='education-heading'>Education</h2>
                 <Degree schools={schools} addNewEducation={addNewEducation}/>
             </div>
         )

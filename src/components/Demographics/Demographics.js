@@ -76,8 +76,8 @@ export default class Demographics extends Component {
         const { people } = this.state;
         const { name, email, address, phone } = this.state.info;
         return (
-            <div>
-                <h2 className='heading'>Demographics</h2>
+            <div className='demographics-background-style'>
+                <h2 className='demographics-heading'>Demographics</h2>
                 <form people={people} onSubmit={this.addDemographics} className='demographics-style'>
                     <Name
                         name={name} 

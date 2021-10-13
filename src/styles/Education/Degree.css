@@ -1,15 +1,26 @@
-.heading{
-    margin: 30px 70px;
+.education-background-style {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.education-heading{
+    text-align: center;
+    padding: 10px 0px;
+    margin: 20px 170px;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 117, 226);
 }
 .education-style {
-    margin: 20px 50px 50px 50px;
+    padding: 20px 50px 50px 50px;
+    border-bottom: 3px solid rgb(0, 0, 0);
 }
 .education-btns {
     width: 150px;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border: none;
     padding: 10px;
+    cursor: pointer;
 }

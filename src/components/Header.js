@@ -12,5 +12,7 @@ export default class Header extends Component {
 
 const headerStyle = {
     textAlign: 'center',
-    margin: '10px 0px'
+    padding: '50px 0px 30px 0px',
+    color: 'rgb(255, 255, 255)',
+    backgroundColor: 'rgb(0, 117, 226)',
 }

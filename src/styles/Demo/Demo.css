@@ -1,50 +1,59 @@
 .preview-section {
-    margin-right: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif, 'Times New Roman';
+    background-color: rgb(255, 255, 255);
 }
-
 .demographics-preview {
     display: flex;
     justify-content: space-around;
     border-bottom: 3px solid rgb(0, 0, 0);
-    margin-right: 20px;
-    margin-top: 40px;
+    padding: 40px 5px 0px 5px;
 }
 .name-preview {
-    margin: 10px 10px 10px 0px;
+    margin: 15px 10px 0px 0px;
+    font-size: 28px;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif, 'Times New Roman';
+}
+.contact-info {
+    line-height: 22px;
+    margin-bottom: 5px;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif, 'Times New Roman';
 }
 .education-preview-title {
-    margin: 50px 408px 20px 20px;
+    margin: 50px 383px 20px 20px;
     font-size: 25px;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    text-decoration: underline;
 }
 .education-preview-info {
     margin-left: 20px; 
-    line-height: 30px;
+    line-height: 22px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 .attended-preview {
     grid-column: 2;
-    font-size: 15px;
+    font-size: 14px;
 }
 .school-preview {
-    font-size: 22px;
+    font-size: 18px;
     grid-row: 1;
 }
 .degree-preview {
-    font-size: 18px;
+    font-size: 14px;
 }
 .gpa-preview, .graduate-preview {
-    font-size: 15px;
+    font-size: 14px;
     grid-column: 1;
 }
 .employment-preview-title {
-    margin: 50px 408px 20px 20px;
+    margin: 50px 302px 20px 20px;
     font-size: 25px;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    text-decoration: underline;
 }
 .employment-preview-info {
     margin-left: 20px; 
+    margin-right: 20px;
     line-height: 25px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -52,23 +61,21 @@
 .employment-length-preview {
     grid-column: 2;
     grid-row: 1;
-    font-size: 15px;
+    font-size: 14px;
 }
 .company-preview {
-    font-size: 20px;
+    font-size: 18px;
     grid-row: 1;
     margin-right: 20px;
 }
 .position-preview {
-    font-size: 16px;
+    font-size: 14px;
     grid-column: 1;
 }
 .duties-preview {
     font-size: 14px;
-    grid-column: 1;
+    grid-column: 1 / 3;
     line-height: 20px;
-}
-.duties-preview {
     margin: 5px 0px;
-    grid-column: 1;
+    font-weight: normal;
 }

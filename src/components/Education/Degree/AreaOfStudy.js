@@ -7,7 +7,7 @@ export default class AreaOfStudy extends Component {
         return (
             <div className='major-input-section'>
                 <label className='major-label'>Area of Study</label>
-                <input className='major-input' type='text' placeholder='Enter area of study...' value={areaOfStudy} onChange={addMajor}></input>
+                <input className='major-input' type='text' value={areaOfStudy} onChange={addMajor}></input>
             </div>
         )
     }

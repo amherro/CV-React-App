@@ -7,10 +7,16 @@ export default class DatesAttended extends Component {
         return (
             <div className='dates-attended-section'>
                 <label className='dates-attended-label'>Please specify the dates you attended this institution.</label>
-                <p className='calendar-label'>Began</p>
-                <input className='calendar' type='date' value={datesAttended} onChange={addStartDate}></input>
-                <p className='calendar-label'>Ended</p>
-                <input className='calendar' type='date' value={datesAttended} onChange={addGradDate}></input>  
+                <div className='calendar-section'>
+                    <div className='began-calendar'>
+                        <p className='calendar-label'>Began</p>
+                        <input className='calendar' type='date' value={datesAttended} onChange={addStartDate}></input>
+                    </div>
+                    <div className='ended-calendar'>
+                        <p className='calendar-label'>Ended</p>
+                        <input className='calendar' type='date' value={datesAttended} onChange={addGradDate}></input> 
+                    </div>
+                </div> 
             </div>
         )
     }

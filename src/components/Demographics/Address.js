@@ -7,7 +7,7 @@ export default class Address extends Component {
         return (
             <div className='address-input-section'>
                 <label className='address-label'>Address</label>
-                <input className='address-input' type='text' name='address' placeholder='Enter your current address...' value={address} onChange={addAddress}></input>
+                <input className='address-input' type='text' name='address' value={address} onChange={addAddress}></input>
             </div>
         )
     }

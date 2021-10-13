@@ -7,7 +7,7 @@ export default class GPA extends Component {
         return (
             <div className='gpa-input-section'>
                 <label className='gpa-label'>What was your GPA?</label>
-                <input className='gpa-input' type='text' placeholder='Enter your GPA...' value={gpa} onChange={addGPA}></input>
+                <input className='gpa-input' type='text' value={gpa} onChange={addGPA}></input>
             </div>
         )
     }

@@ -1,15 +1,25 @@
-.heading {
-    margin: 30px 70px;
+.employment-background-style {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.employment-heading {
+    text-align: center;
+    padding: 10px 0px;
+    margin: 20px 170px;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 117, 226);
 }
 .employment-style {
-    margin: 20px 50px 50px 50px;
+    padding: 20px 50px 50px 50px;
 }
 .employment-btns {
     width: 150px;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-right: 50px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border: none;
     padding: 10px;
+    cursor: pointer;
 }

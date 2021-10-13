@@ -7,7 +7,7 @@ export default class Email extends Component {
         return (
             <div className='email-input-section'>
                 <label className='email-label'>Email</label>
-                <input className='email-input' type='email' name='email' placeholder='Enter your email..' value={email} onChange={addEmail}></input>
+                <input className='email-input' type='email' name='email' value={email} onChange={addEmail}></input>
             </div>
         )
     }
