@@ -16,13 +16,7 @@ export default class Demo extends Component {
                 </div>
                 <div className='education-preview'>
                     <h1 className='education-preview-title'>Education</h1>
-                    <div className='education-preview-info'>
-                        <h3 className='attended-preview'>{schools[5]} - {schools[6]}</h3>
-                        <h1 className='school-preview'>{schools[0]}</h1>
-                        <h2 className='degree-preview'>{schools[2]} in {schools[1]}</h2>
-                        <h3 className='gpa-preview'>GPA: {schools[3]}</h3>
-                        <h3 className='graduate-preview'>{schools[4]}</h3>
-                    </div>
+                    <div>{schools}</div>
                 </div>
                 <div className='employment-preview'>
                     <h1 className='employment-preview-title'>Work Experience</h1>

@@ -3,8 +3,10 @@ import '../../../styles/Education/Degree.css'
 import AreaOfStudy from './AreaOfStudy'
 import DatesAttended from './DatesAttended'
 import DegreeType from './DegreeType'
+import EducationPreview from './EducationPreview'
 import GPA from './GPA'
 import School from './School'
+import uniqid from 'uniqid'
 
 export default class Degree extends Component {
     constructor(props) {
@@ -16,10 +18,8 @@ export default class Degree extends Component {
                 areaOfStudy: '',
                 degreeType: '',
                 gpa: '',
-                datesAttended: {
-                    start: '',
-                    end: '',
-                }
+                start: '',
+                end: '',
             },
             degrees: []
         }
@@ -27,37 +27,29 @@ export default class Degree extends Component {
     }
     addDegree = (e) => {
         e.preventDefault();
-        this.props.addNewEducation([this.state.education.school, this.state.education.areaOfStudy, this.state.education.degreeType, this.state.education.gpa, this.state.education.graduate, this.state.education.datesAttended.start, this.state.education.datesAttended.end]);
+        this.props.addNewEducation(<EducationPreview key={uniqid()} education={this.state.education}/>);
         this.setState({
-            degrees: this.state.degrees.concat(this.state.education).map((degree) => {
-                return degree
-            }),
+            degrees: this.state.degrees.concat(this.state.education),
             education: {
                 school: '',
                 areaOfStudy: '',
                 degreeType: '',
                 gpa: '',
-                graduate: false,
-                datesAttended: {
-                    start: '',
-                    end: '',
-                }
+                start: '',
+                end: '',
             },
         })
     }
     addSchool = (e) => {
         this.setState({
-            education : {
+            education: {
                 school: e.target.value,
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
-                graduate: this.state.education.graduate,
-                datesAttended: {
-                    start: this.state.education.datesAttended.start,
-                    end: this.state.education.datesAttended.end,
-                }
-            }
+                start: this.state.education.start,
+                end: this.state.education.end,
+            },
         })
     }
     addMajor = (e) => {
@@ -67,12 +59,9 @@ export default class Degree extends Component {
                 areaOfStudy: e.target.value,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
-                graduate: this.state.education.graduate,
-                datesAttended: {
-                    start: this.state.education.datesAttended.start,
-                    end: this.state.education.datesAttended.end,
-                }
-            }
+                start: this.state.education.start,
+                end: this.state.education.end,
+            },
         })
     }
     chooseDegree = (e) => {
@@ -82,12 +71,9 @@ export default class Degree extends Component {
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: e.target.value,
                 gpa: this.state.education.gpa,
-                graduate: this.state.education.graduate,
-                datesAttended: {
-                    start: this.state.education.datesAttended.start,
-                    end: this.state.education.datesAttended.end,
-                }
-            }
+                start: this.state.education.start,
+                end: this.state.education.end,
+            },
         })
     }
     addGPA = (e) => {
@@ -97,11 +83,9 @@ export default class Degree extends Component {
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: e.target.value,
-                datesAttended: {
-                    start: this.state.education.datesAttended.start,
-                    end: this.state.education.datesAttended.end,
-                }
-           }
+                start: this.state.education.start,
+                end: this.state.education.end,
+           },
        })
     }
     addStartDate = (e) => {
@@ -111,12 +95,9 @@ export default class Degree extends Component {
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
-                graduate: this.state.education.graduate,
-                datesAttended: {
-                    start: e.target.value,
-                    end: this.state.education.datesAttended.end,
-                }
-            }
+                start: e.target.value,
+                end: this.state.education.end,
+            },
         })
     }
     addGradDate = (e) => {
@@ -126,12 +107,9 @@ export default class Degree extends Component {
                 areaOfStudy: this.state.education.areaOfStudy,
                 degreeType: this.state.education.degreeType,
                 gpa: this.state.education.gpa,
-                graduate: this.state.education.graduate,
-                datesAttended: {
-                    start: this.state.education.datesAttended.start,
-                    end: e.target.value,
-                }
-            }
+                start: this.state.education.start,
+                end: e.target.value,
+            },
         })
     }
     resetEducationField = (e) => {
@@ -142,10 +120,8 @@ export default class Degree extends Component {
                 areaOfStudy: '',
                 degreeType: '',
                 gpa: '',
-                datesAttended: {
-                    start: '',
-                    end: '',
-                }
+                start: '',
+                end: '',
             },
         })
     }

@@ -6,6 +6,7 @@ import Education from './components/Education/Education'
 import Employment from './components/Employment/Employment'
 import Demo from './components/Demo/Demo'
 
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +30,7 @@ export default class App extends Component {
       schools: this.state.schools.concat(school)
     })
   }
-
+  
   addNewEmployer = (employer) => {
     this.setState({
       employers: this.state.employers.concat(employer)

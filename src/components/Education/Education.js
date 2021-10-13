@@ -8,7 +8,7 @@ export default class Education extends Component {
         return (
             <div className='education-background-style'>
                 <h2 className='education-heading'>Education</h2>
-                <Degree schools={schools} addNewEducation={addNewEducation}/>
+                <Degree schools={schools} addNewEducation={addNewEducation} />
             </div>
         )
     }
