@@ -17,4 +17,6 @@
 }
 .calendar {
     width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline-color: rgb(0, 117, 226);
 }

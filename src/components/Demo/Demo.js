@@ -20,12 +20,7 @@ export default class Demo extends Component {
                 </div>
                 <div className='employment-preview'>
                     <h1 className='employment-preview-title'>Work Experience</h1>
-                    <div className='employment-preview-info'>
-                        <h1 className='company-preview'>{employers[0]}</h1>
-                        <h2 className='position-preview'>{employers[1]}</h2>
-                        <h3 className='duties-preview'>{employers[2]}</h3>
-                        <h3 className='employment-length-preview'>{employers[3]} - {employers[4]}</h3>
-                    </div>
+                    <div>{employers}</div>
                 </div>
             </div>
         )

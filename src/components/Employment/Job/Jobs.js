@@ -3,7 +3,9 @@ import '../../../styles/Employment/Employment.css'
 import Company from './Company'
 import Duties from './Duties'
 import EmploymentLength from './EmploymentLength'
+import EmploymentPreview from './EmploymentPreview'
 import Position from './Position'
+import uniqid from 'uniqid'
 
 export default class Jobs extends Component {
     constructor(props) {
@@ -13,28 +15,24 @@ export default class Jobs extends Component {
                 company: '',
                 position: '',
                 duties: '',
-                length: {
-                    started: '',
-                    ended: '',
-                },
+                started: '',
+                ended: '',
             },
             jobs: [],
         }
     }
     addEmployment = (e) => {
         e.preventDefault();
-        this.props.addNewEmployer([this.state.job.company, this.state.job.position, this.state.job.duties, this.state.job.length.started, this.state.job.length.ended])
+        this.props.addNewEmployer(<EmploymentPreview key={uniqid()} job={this.state.job}/>)
         this.setState({
            jobs: this.state.jobs.concat(this.state.job),
            job: {
                company: '',
                position: '',
                duties: '',
-               length: {
-                   started: '', 
-                   ended: '',
-               }
-           }
+               started: '',
+               ended: '',
+            }
         })
     }
     addCompanyName = (e) => {
@@ -43,10 +41,8 @@ export default class Jobs extends Component {
                 company: e.target.value,
                 position: this.state.job.position,
                 duties: this.state.job.duties,
-                length: {
-                    started: this.state.job.length.started,
-                    ended: this.state.job.length.ended,
-                },
+                started: this.state.job.started,
+                ended: this.state.job.ended,
             }
         })
     }
@@ -56,10 +52,8 @@ export default class Jobs extends Component {
                 company: this.state.job.company,
                 position: e.target.value,
                 duties: this.state.job.duties,
-                length: {
-                    started: this.state.job.length.started,
-                    ended: this.state.job.length.ended,
-                },
+                started: this.state.job.started,
+                ended: this.state.job.ended,
             }
         })
     }
@@ -69,10 +63,8 @@ export default class Jobs extends Component {
                 company: this.state.job.company,
                 position: this.state.job.position,
                 duties: e.target.value,
-                length: {
-                    started: this.state.job.length.started,
-                    ended: this.state.job.length.ended,
-                },
+                started: this.state.job.started,
+                ended: this.state.job.ended,
             }
         })
     }
@@ -82,10 +74,8 @@ export default class Jobs extends Component {
                 company: this.state.job.company,
                 position: this.state.job.position,
                 duties: this.state.job.duties,
-                length: {
-                    started: e.target.value,
-                    ended: this.state.job.length.ended,
-                },
+                started: e.target.value,
+                ended: this.state.job.ended,
             }
         })
     }
@@ -95,10 +85,8 @@ export default class Jobs extends Component {
                 company: this.state.job.company,
                 position: this.state.job.position,
                 duties: this.state.job.duties,
-                length: {
-                    started: this.state.job.length.started,
-                    ended: e.target.value,
-                },
+                started: this.state.job.started,
+                ended: e.target.value,
             }
         })
     }
@@ -109,10 +97,8 @@ export default class Jobs extends Component {
                 company: '',
                 position: '',
                 duties: '',
-                length: {
-                    started: '',
-                    ended: '',
-                },
+                started: '',
+                ended: '',
             },
         })
     }

@@ -10,4 +10,5 @@
 .duties-input {
     width: 500px;
     font-family: Arial, Helvetica, sans-serif;
+    outline-color: rgb(0, 117, 226);
 }
