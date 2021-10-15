@@ -23,3 +23,7 @@
     padding: 10px;
     cursor: pointer;
 }
+.employment-btns:hover {
+    background-color: rgb(87, 87, 87);
+    font-weight: bold;
+}

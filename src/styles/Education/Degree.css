@@ -24,3 +24,7 @@
     padding: 10px;
     cursor: pointer;
 }
+.education-btns:hover {
+    background-color: rgb(87, 87, 87);
+    font-weight: bold;
+}
