@@ -26,5 +26,13 @@
 }
 .demographics-btn:hover {
     background-color: rgb(87, 87, 87);
+}
+.demographics-btn:active {
     font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .demographics-heading {
+        margin: 30px 130px;
+    }   
 }

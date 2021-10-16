@@ -18,4 +18,17 @@
     background-color: rgb(255, 255, 255);
 }
 
+@media (max-width: 1000px) {
+    .main-display {
+        flex-direction: column;
+    }
+    .form-style {
+        margin: 0px;
+    }
+    .demo-style {
+        min-width: 480px;
+        margin-left: 10px;
+    }
+}
+
 

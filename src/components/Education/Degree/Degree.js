@@ -154,7 +154,6 @@ export default class Degree extends Component {
                         addGradDate={this.addGradDate}
                     />
                     <button className='education-btns' type='submit'>Add</button>
-                    <button className='education-btns'>Edit School</button>
                     <button className='education-btns' onClick={this.resetEducationField}>Reset</button>
                 </form>
             </div>

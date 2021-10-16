@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import '../../styles/Demographics/Demographics.css'
 import Name from './Name'
 import Email from './Email'
 import Address from './Address'
 import Phone from './Phone'
-import '../../styles/Demographics/Demographics.css'
+
 
 export default class Demographics extends Component {
     constructor(props) {

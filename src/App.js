@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './styles/App.css'
+import './styles/Main/App.css'
 import Header from './components/Header'
 import Demographics from './components/Demographics/Demographics'
 import Education from './components/Education/Education'
@@ -30,7 +30,6 @@ export default class App extends Component {
       schools: this.state.schools.concat(school)
     })
   }
-  
   addNewEmployer = (employer) => {
     this.setState({
       employers: this.state.employers.concat(employer)

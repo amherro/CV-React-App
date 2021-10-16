@@ -79,3 +79,9 @@
     margin: 5px 0px;
     font-weight: normal;
 }
+
+@media (max-width: 1000px) {
+    .employment-length-preview {
+        font-size: 12px;
+    }
+}

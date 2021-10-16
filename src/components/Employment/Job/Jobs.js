@@ -125,7 +125,6 @@ export default class Jobs extends Component {
                         endJobDate={this.endJobDate}
                     />
                     <button className='employment-btns' type='submit'>Add</button>
-                    <button className='employment-btns'>Add Another Job</button>
                     <button className='employment-btns' onClick={this.resetEmploymentField}>Reset</button>
                 </form>
             </div>
