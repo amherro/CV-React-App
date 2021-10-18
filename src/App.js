@@ -5,6 +5,7 @@ import Demographics from './components/Demographics/Demographics'
 import Education from './components/Education/Education'
 import Employment from './components/Employment/Employment'
 import Demo from './components/Demo/Demo'
+import Footer from './Footer'
 
 
 export default class App extends Component {
@@ -39,9 +40,7 @@ export default class App extends Component {
     const { demographics, schools, employers } = this.state;
     return (
       <div>
-        <header>
-          <Header />
-        </header>
+        <Header />
         <main className='main-display'>
           <div className='form-style'>
             <Demographics 
@@ -66,6 +65,7 @@ export default class App extends Component {
             />
           </div>
         </main>
+        <Footer />
       </div>
     )
   }

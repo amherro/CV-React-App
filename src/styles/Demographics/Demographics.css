@@ -33,6 +33,7 @@
 
 @media (max-width: 1000px) {
     .demographics-heading {
-        margin: 30px 130px;
+        padding: 10px 50px;
+        margin: 20px 170px;
     }   
 }

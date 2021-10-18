@@ -1,5 +1,7 @@
 * {
+    padding: 0px;
     margin: 0px;
+    min-width: fit-content;
 }
 .main-display {
     display: flex;
@@ -7,28 +9,28 @@
 }
 .form-style {
     border: 2px solid rgb(0, 0, 0);
-    margin: 30px;
+    margin: 30px 0px 30px 20px;
 }
 .demo-style {
-    margin-top: 30px;
-    margin-right: 30px;
+    margin: 30px;
+    margin-left: 25px;
     height: 1000px;
-    min-width: 550px;
     border: 2px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 }
 
-@media (max-width: 1000px) {
+ @media (max-width: 1000px) {
     .main-display {
         flex-direction: column;
     }
     .form-style {
-        margin: 0px;
+        margin-right: 25px;
     }
+    
+} 
+
+@media (min-width: 1001px) {
     .demo-style {
-        min-width: 480px;
-        margin-left: 10px;
+        margin-right: 50px;
     }
-}
-
-
+} 
